@@ -1,2 +1,25 @@
-<h1> testing. attention please</h1>
-<iframe width="424" height="240" src="https://www.youtube.com/embed/JjZZAE-8OBA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="controls">
+  <button type="button" onclick="applauseStart()" >Applause</button>
+</div>
+	<script>
+		function applauseStart() {
+			var xmlhttp = new XMLHttpRequest();
+    			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					console.log(this.responseText);
+				}	
+      			};
+    			
+			xmlhttp.open("GET", "server.php?clap=1", true);
+			xmlhttp.send();
+		}
+		
+		
+	</script>
+
+</body>
+</html>

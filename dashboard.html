@@ -1,0 +1,14 @@
+<audio id="myAudio">
+  <source src="applause8.mp3" type="audio/mpeg">
+</audio>
+<script>
+
+var source = new EventSource("dash.php");
+var audio = document.getElementById("myAudio");
+source.onmessage = function(event) {
+	console.log(event.data);
+	if(event.data == 1) {
+		audio.play();
+	}
+};
+</script>
