@@ -1,15 +1,19 @@
 <?php
-
+session_start();
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
-$datafile = fopen("data.txt","r+");
-$clap = fgetc($datafile);
+$clapVar = $_SESSION['clap'];
+#$comments = "";
+$commentfile = fopen("comment.txt","r");
+while(!feof($commentfile)) {
+	$comments=$comments.rtrim(fgets($commentfile), "\r\n")."\\n";
+	#echo "data: { \"text\" : \"$comment\"}\n\nretry:10"; 
+}
+fclose($commentfile);
 
-echo "data: $clap\n\nretry:10\n";
-$clap = 0;
-fclose($datafile);
-$datafile = fopen("data.txt","w");
-fwrite($datafile,$clap);
-fclose($datafile);
+echo	"data: { \"clap\" : \"$clapVar\", \"text\" : \"$comments\"}\n\nretry:10\n";
+#echo "data: { \"clap\" : \"$clapVar\"}\n\nretry:10\n";
+#echo "data: $clapVar\n\nretry:10\n";
+$_SESSION['clap']=0;
 flush();
 ?>
