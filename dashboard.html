@@ -1,21 +1,13 @@
 <html>
 <body>
+<button type="button" id="volumeUp">+</button>
+<span id="volumeLevel">50</span>
+<button type="button" id="volumeDown">-</button>
+<button type="button" id="muteButton">Mute</button>
 <div id="comments"></div>
+
+<script src="js/dashboard.js"></script>
 </body>
 
-<script>
-var source = new EventSource("dash.php");
-source.onmessage = function(event) {
-	console.log(event.data);
-	var info = JSON.parse(event.data);
-	if(info.clap == 1) {
-		var audioElement = new Audio("applause8.mp3");
-		audioElement.play();
-	}
-	
-	var elem = document.getElementById('comments');
-	elem.innerText = info.text;
-};
-</script>
 
 </html>

@@ -1,41 +1,35 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+    <title>HOME</title>
+  </head>
+  <body>
+    <div class="wrap" style="background-image: url(assets/stop.gif)";>
+      <div class="menu" align="left">
+        <div class="links">
+          <a href="reception.html">Reception</a>
+        </div>
+        <div class="links">
+          <a href="boxoffice.html">Box Office</a>
+        </div>
+        <div class="links">
+          <a href="livetheatreentrance.html">Live-Theatre</a>
+        </div>
+        <div class="links">
+          <a href="cinema.html">Cinema</a>
+        </div>
 
-<div id="controls">
-  <input id="comment" type="text" value="">
-  <button type="button" onclick="sendComment()" >Send</button>
-  <button type="button" onclick="applauseStart()" >Applause</button>
-</div>
-	<script>
-		function applauseStart() {
-			var xmlhttp = new XMLHttpRequest();
-    			xmlhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					console.log(this.responseText);
-				}	
-      			};
-    			
-			xmlhttp.open("GET", "server.php?clap=1", true);
-			xmlhttp.send();
-		}
-		function sendComment() {
-			var comment = document.getElementById("comment").value;
-			var xmlhttp = new XMLHttpRequest();
-    			xmlhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					console.log(this.responseText);
-				}	
-      			};
-    				
-			document.getElementById("comment").value = "";
-			xmlhttp.open("GET", "server.php?comment="+comment, true);
-			xmlhttp.send();
+      </div>
+      <div class="logo" align="left">
 
-		}	
-		
-		
-	</script>
+        <a href="index.html" id="logo">
+          <img src="assets/logo.png" alt="" class="logo">
+        </a>
 
-</body>
+      </div>
+    </div>
+  </body>
 </html>
