@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+div.player {
+  position: inherit;
+}
+
+iframe {
+  position: absolute;
+  z-index: -2;
+}
+
+div.controls {
+  padding: 10px;
+  opacity: 0.5;
+  background-color: none;
+  z-index: 0;
+  position: relative;
+  float: left;
+}
+
+div.playbar {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 7fr 0.5fr 0.5fr;
+  grid-gap: 10px;
+  bottom: 0;
+  left: 25%;
+  padding: 10px;
+  margin: auto;
+  margin-bottom: 3%;
+  width: 50%;
+  align-self: center;
+}
+
+button {
+  background-color: none;
+  color: white;
+  border: solid thin white;
+  padding: 10px;
+}
+
+input {
+  background-color: none;
+  color: white;
+  border: solid white thin;
+  padding: 10px;
+}
