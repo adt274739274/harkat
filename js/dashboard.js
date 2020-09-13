@@ -2,12 +2,12 @@
 var volumeLevel = 0.5;
 var muteState = false;
 
-var source = new EventSource("scripts/dash.php");
+var source = new EventSource("../scripts/dash.php");
 source.onmessage = function(event) {
 	console.log(event.data);
 	var info = JSON.parse(event.data);
 	if(info.clap == 1) {
-		var audioElement = new Audio("assets/applause8.mp3");
+		var audioElement = new Audio("../assets/applause8.mp3");
 		audioElement.volume = volumeLevel;
 		audioElement.muted = muteState;
 		audioElement.play();
