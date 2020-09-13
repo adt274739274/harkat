@@ -2,7 +2,7 @@
 session_start();
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
-$clapVarFile = fopen("data/clapVar.txt","r");
+$clapVarFile = fopen("../data/clapVar.txt","r");
 $clapVar = fgetc($clapVarFile);
 fclose($clapVarFile);
 $comments = "";
@@ -19,7 +19,7 @@ echo	"data: { \"clap\" : \"$clapVar\", \"text\" : \"$comments\"}\n\nretry:10\n";
 #echo "data: { \"clap\" : \"$clapVar\"}\n\nretry:10\n";
 #echo "data: $clapVar\n\nretry:10\n";
 $clapVar=0;
-$clapVarFile = fopen("data/clapVar.txt","w");
+$clapVarFile = fopen("../data/clapVar.txt","w");
 fwrite($clapVarFile,$clapVar);
 fclose($clapVarFile);
 #$_SESSION['clap']=0;
