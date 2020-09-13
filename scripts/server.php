@@ -1,13 +1,13 @@
 <?php
 
-session_start();
+//session_start();
 $clapVar = $_REQUEST['clap'];
-$_SESSION['clap'] = $clapVar;
+//$_SESSION['clap'] = $clapVar;
 if ($clapVar == 1) {
 
-	#$varfile = fopen("data.txt", "w");
-	#fwrite($varfile,$clapVar);
-	#fclose($varfile);
+	$varfile = fopen("data/clapVar.txt", "w");
+	fwrite($varfile,$clapVar);
+	fclose($varfile);
 	echo $clapVar;
 }
 else {
