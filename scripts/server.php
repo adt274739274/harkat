@@ -5,7 +5,7 @@ $clapVar = $_REQUEST['clap'];
 //$_SESSION['clap'] = $clapVar;
 if ($clapVar == 1) {
 
-	$varfile = fopen("data/clapVar.txt", "w");
+	$varfile = fopen("../data/clapVar.txt", "w");
 	fwrite($varfile,$clapVar);
 	fclose($varfile);
 	echo $clapVar;
