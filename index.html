@@ -1,35 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/master.css">
-    <title>HOME</title>
-  </head>
-  <body>
-    <div class="wrap" style="background-image: url(assets/stop.gif)";>
-      <div class="menu" align="left">
-        <div class="links">
-          <a href="reception.html">Reception</a>
-        </div>
-        <div class="links">
-          <a href="boxoffice.html">Box Office</a>
-        </div>
-        <div class="links">
-          <a href="livetheatreentrance.html">Live-Theatre</a>
-        </div>
-        <div class="links">
-          <a href="cinema.html">Cinema</a>
-        </div>
+<html lang="en" class="no-js">
 
-      </div>
-      <div class="logo" align="left">
+    <head>
 
-        <a href="index.html" id="logo">
-          <img src="assets/logo.png" alt="" class="logo">
-        </a>
+        <!-- Meta Data -->
+        <title>Harkat Studios</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="img/favicon/favicon-196x196.png" sizes="196x196">
 
-      </div>
-    </div>
-  </body>
+
+
+        <!-- Fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/preloader.css" />
+
+        <link href="style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+
+        <script src="js/modernizr.custom.js"></script>
+
+	<body id="bigWrapper" data-spy="scroll" data-target=".navbar-default" data-offset="100">
+
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="test.html">HARKAT STUDIOS</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a data-scroll href="reception.html">Reception</a></li>
+                            <li><a data-scroll href="livetheatre.html">Live-Theatre</a></li>
+                            <li><a data-scroll href="cinema.html">Cinema</a></li>
+                            <li><a data-scroll href="boxoffice.html">Box Office</a></li>
+                            <li><a data-scroll href="https://my.matterport.com/show/?m=QaYtcRnoBRd">The Space</a></li>
+			    <li class="divider"></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+
+
+
+	<section>
+            <div class="black-overlay" style="background-image: url(stop.gif)";></div>
+        </section>
+
+	<!--preloader-->
+        <div class="ip-header">
+            <div class="ip-logo">
+                <img class="img-responsive preloaderLogo center-block" src="img/logoWhite.png" alt="harkat studios logo">
+            </div>
+
+            <div class="ip-loader">
+                <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                    <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                    <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                </svg>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+	<script src="js/preloader.js"></script>
+	</body>
 </html>

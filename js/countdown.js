@@ -1,4 +1,4 @@
-var countdownDate = new Date("Sep 7, 2020 22:15:00");
+var countdownDate = new Date("Sep 17, 2020 21:00:00");
 var enterButton = document.getElementById("enter");
 
 enterButton.onclick = function passwordCheckAndLink() {

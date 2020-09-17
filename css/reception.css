@@ -1,0 +1,29 @@
+
+
+.reception  h1,h2,h3,h4,h5,a{
+  color: white !important;
+}	
+input {
+  width: 50%;
+  height: 10%;
+  padding: 20px;
+}
+
+section button {
+  width: 50%;
+  height: 10%;
+  background-color: transparent;
+  color: white;
+  border: solid thin white;
+  padding: 10px;
+}
+
+section button:hover {
+  background-color: white;
+  color: black;
+}
+
+#reception {
+  text-decoration: underline;
+  font-style: italic;
+}
