@@ -16,7 +16,6 @@ iframe {
 }
 
 div.controls {
-  padding: 10px;
   opacity: 0.5;
   background-color: none;
   z-index: 0;
@@ -50,4 +49,38 @@ input {
   color: white;
   border: solid white thin;
   padding: 10px;
+}
+
+
+#live {
+  opacity:0.5;
+  margin-top:3%;  
+  margin-right:3%;
+  padding: 5px;
+  border-radius: 5px;
+  float: right;	
+}
+
+.blinking {
+  color: red;
+  font-size: 15px;
+  -webkit-animation: 1s blink ease infinite;
+  animation: 1s blink ease infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
