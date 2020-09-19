@@ -1,3 +1,19 @@
+var liveCtr = document.getElementById("liveCounter");
+
+function getViewerCount() {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			console.log(this.responseText);
+		}	
+	};
+	
+	xmlhttp.open("GET", "scripts/livecount.php", true);
+	xmlhttp.send();
+}
+
+setInterval(getViewerCount,1000);
+
 var clapButton = document.getElementById("clapButton");
 
 clapButton.onclick = function applauseStart() {
